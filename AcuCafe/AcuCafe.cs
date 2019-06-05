@@ -71,12 +71,17 @@ namespace AcuCafe
             get { return "Expresso"; }
         }
 
+        public string AddTopping()
+        {
+            return "Chocolate"; 
+        } 
+
         public new double Cost()
         {
             double cost = 1.8;
 
             if (HasMilk)
-                cost += MilkCost;
+                cost += MilkCost;   
 
             if (HasSugar)
                 cost += SugarCost;
@@ -87,24 +92,5 @@ namespace AcuCafe
 
    
 
-    public class IceTea : Drink
-    {
-        public new string Description
-        {
-            get { return "Ice tea"; }
-        }
-
-        public new double Cost()
-        {
-            double cost = 1.5;
-
-            if (HasMilk)
-                cost += MilkCost;
-
-            if (HasSugar)
-                cost += SugarCost;
-
-            return cost;
-        }
-    }
+   
 }
