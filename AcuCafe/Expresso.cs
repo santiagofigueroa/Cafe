@@ -11,7 +11,7 @@ namespace AcuCafe
         private double cost { get; set; } = 1.8;
         private string topping { get; } = "Chocolate";
 
-        public string getChocolateTopping()
+        public override string getChocolateTopping()
         {
 
             return topping;

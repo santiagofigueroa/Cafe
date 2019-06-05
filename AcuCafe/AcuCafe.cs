@@ -28,6 +28,8 @@ namespace AcuCafe
             if (drink is Expresso)
             {
                 drink = new Expresso();
+                // Adding topping to just Expresso. Other drinks are nullify
+                drink.getChocolateTopping();
 
             }
             else if (drink is Tea)
@@ -74,6 +76,10 @@ namespace AcuCafe
             string message = "We are preparing the following drink for you: " + drink;
             if (HasMilk)
                 message += "with milk";
+            // TDOD:  Will this count telling the barista ?
+            else if (drink.Equals("IceTea"))
+                message += "No milk with Ice Tea please";
+
             else
                 message += "without milk";
 

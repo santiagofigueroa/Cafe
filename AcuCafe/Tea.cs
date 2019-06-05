@@ -19,6 +19,12 @@ namespace AcuCafe
         public override void setCost(double price)
         {
             cost = price;
-        } 
+        }
+
+        public override string getChocolateTopping()
+        {
+
+            return null;
+        }
     }
 }

@@ -18,5 +18,11 @@ namespace AcuCafe
         {
             cost = price;
         }
+
+        public override string getChocolateTopping()
+        {
+
+            return null;
+        }
     }
 }

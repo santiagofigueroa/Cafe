@@ -11,5 +11,6 @@ namespace AcuCafe
 
         public abstract double Cost();
         public abstract void setCost(double price);
+        public abstract string getChocolateTopping();
     }
 }
