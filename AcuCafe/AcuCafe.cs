@@ -9,7 +9,7 @@ namespace AcuCafe
             Drink drink = new Drink();
             if (type == "Expresso")
             {
-                drink = new Expresso();
+               // drink = new Expresso();
             }
             else if (type == "HotTea")
                 drink = new Tea();
@@ -62,35 +62,7 @@ namespace AcuCafe
 
             Console.WriteLine(message);
         }
-    }
-
-    public class Expresso : Drink
-    {
-        public new string Description
-        {
-            get { return "Expresso"; }
-        }
-
-        public string AddTopping()
-        {
-            return "Chocolate"; 
-        } 
-
-        public new double Cost()
-        {
-            double cost = 1.8;
-
-            if (HasMilk)
-                cost += MilkCost;   
-
-            if (HasSugar)
-                cost += SugarCost;
-
-            return cost;
-        }
-    }
-
-   
+    }  
 
    
 }
