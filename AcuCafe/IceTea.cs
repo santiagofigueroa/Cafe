@@ -10,21 +10,13 @@ namespace AcuCafe
     {
         private double cost { get; set; } = 1.5;
 
-        public new string Description
+        public new double Cost()
         {
-            get { return "Ice tea"; }
-        }
-
-        public new double Cost() {
-         
-
-            if (HasMilk)
-                cost += MilkCost;
-
-            if (HasSugar)
-                cost += SugarCost;
-
             return cost;
         }
+        public void setCost(double price )
+        {
+
+        } 
     }
 }

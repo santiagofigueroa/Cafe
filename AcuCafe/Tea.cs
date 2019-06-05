@@ -8,22 +8,10 @@ namespace AcuCafe
 {
     public class Tea : Drink
     {
-        private double cost { get; set; } = 1;
+        private double cost { get; set; } = 1.0;
 
-        public new string Description
+        public override double Cost()
         {
-            get { return "Hot tea"; }
-        }
-
-        public new double Cost()
-        {
-            
-
-            if (HasMilk)
-                cost += MilkCost;
-
-            if (HasSugar)
-                cost += SugarCost;
 
             return cost;
         }

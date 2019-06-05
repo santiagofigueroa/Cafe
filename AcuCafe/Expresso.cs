@@ -6,13 +6,9 @@ using System.Threading.Tasks;
 
 namespace AcuCafe
 {
-    public class Expresso : Drink
+    public class Expresso : Drink 
     {
         private double cost { get; set; } = 1.8;
-        public new string Description
-        {
-            get { return "Expresso"; }
-        }
 
         public string AddTopping()
         {
@@ -21,13 +17,6 @@ namespace AcuCafe
 
         public new double Cost()
         {
- 
-            if (HasMilk)
-                cost += MilkCost;
-
-            if (HasSugar)
-                cost += SugarCost;
-
             return cost;
         }
     }
