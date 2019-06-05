@@ -10,6 +10,6 @@ namespace AcuCafe
     {
 
         public abstract double Cost();
-        public abstract double setCost(double price);
+        public abstract void setCost(double price);
     }
 }

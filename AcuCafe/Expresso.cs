@@ -6,13 +6,15 @@ using System.Threading.Tasks;
 
 namespace AcuCafe
 {
-    public class Expresso : Drink 
+    public class Expresso : Drink
     {
         private double cost { get; set; } = 1.8;
+        private string topping { get; } = "Chocolate";
 
-        public string AddTopping()
+        public string getChocolateTopping()
         {
-           return "Chocolate";
+
+            return topping;
         }
 
         public override double Cost()

@@ -1,5 +1,10 @@
 ﻿using System;
-
+/// <summary>
+/// 
+/// Reference for Implementation. 
+/// https://www.c-sharpcorner.com/UploadFile/damubetha/solid-principles-in-C-Sharp/
+/// 
+/// </summary>
 namespace AcuCafe
 {
     public class AcuCafe
@@ -13,32 +18,36 @@ namespace AcuCafe
 
         public static Drink OrderDrink(Drink type, bool hasMilk, bool hasSugar)
         {
+            // Set field to be used later for the Preparation method.
+            HasMilk = hasMilk;
+            HasSugar = hasSugar;
             /// For compering and returning variable.
             Drink drink = type;
- 
+
 
             if (drink is Expresso)
-            {          
+            {
                 drink = new Expresso();
-                
+
             }
             else if (drink is Tea)
-            {                
+            {
                 drink = new Tea();
             }
             else if (drink is IceTea)
-            {            
+            {
                 drink = new IceTea();
-                
+
             }
 
             try
             {
-               double drinkCost = drink.Cost();
-                if(hasMilk)
+                double drinkCost = drink.Cost();
+                // Check is has mill and that is not an "Ice Tea"
+                if (hasMilk && !(drink is IceTea))
                 {
                     drinkCost += MilkCost;
-                } 
+                }
 
                 if (hasSugar)
                 {
@@ -47,7 +56,9 @@ namespace AcuCafe
 
                 // Sets the new price to the Drink. 
                 drink.setCost(drinkCost);
-                Prepare(drink.ToString()); 
+                // Here could be a bit confusing as will print the name of the class,
+                // whicj will print "IceTea" rather tha "Ice Tea"
+                Prepare(drink.ToString());
             }
             catch (Exception ex)
             {
@@ -75,7 +86,7 @@ namespace AcuCafe
         }
     }
 
-   
 
-   
+
+
 }
