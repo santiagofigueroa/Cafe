@@ -13,7 +13,7 @@ namespace AcuCafe
 
         public static Drink OrderDrink(Drink type, bool hasMilk, bool hasSugar)
         {
-            /// 
+            /// For compering and returning variable.
             Drink drink = type;
  
 
@@ -39,13 +39,14 @@ namespace AcuCafe
                 {
                     drinkCost += MilkCost;
                 } 
+
                 if (hasSugar)
                 {
                     drinkCost += SugarCost;
                 }
-                // drink.HasMilk = hasMilk;
-                //drink.HasSugar = hasSugar;
-                drinkCost = drink.Cost();
+
+                // Sets the new price to the Drink. 
+                drink.setCost(drinkCost);
                 Prepare(drink.ToString()); 
             }
             catch (Exception ex)

@@ -9,6 +9,7 @@ namespace AcuCafe
     public abstract class Drink
     {
 
-        public abstract double Cost(); 
+        public abstract double Cost();
+        public abstract double setCost(double price);
     }
 }

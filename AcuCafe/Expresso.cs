@@ -15,9 +15,14 @@ namespace AcuCafe
            return "Chocolate";
         }
 
-        public new double Cost()
+        public override double Cost()
         {
             return cost;
+        }
+
+        public override void setCost(double price)
+        {
+            cost = price;
         }
     }
 }

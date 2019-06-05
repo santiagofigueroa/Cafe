@@ -15,5 +15,10 @@ namespace AcuCafe
 
             return cost;
         }
+
+        public override void setCost(double price)
+        {
+            cost = price;
+        } 
     }
 }
