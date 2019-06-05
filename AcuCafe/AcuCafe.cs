@@ -4,23 +4,25 @@ namespace AcuCafe
 {
     public class AcuCafe
     {
-        public static Drink OrderDrink(string type, bool hasMilk, bool hasSugar)
+        public static Drink OrderDrink(Drink type, bool hasMilk, bool hasSugar)
         {
-            Drink drink = new Drink();
-            if (type == "Expresso")
+            /// 
+            object drink = type;
+           
+            if (drink is Expresso)
             {
                drink = new Expresso();
             }
-            else if (type == "HotTea")
+            else if (drink is Tea)
                 drink = new Tea();
-            else if (type == "IceTea")
+            else if (drink is IceTea)
                 drink = new IceTea();
 
             try
             {
-                drink.HasMilk = hasMilk;
-                drink.HasSugar = hasSugar;
-                drink.Prepare(type);
+                type.HasMilk = hasMilk;
+                type.HasSugar = hasSugar;
+                //type.Prepare(type); //TODO: Still thinking whay to do here.
             }
             catch (Exception ex)
             {
@@ -28,7 +30,7 @@ namespace AcuCafe
                 System.IO.File.WriteAllText(@"c:\Error.txt", ex.ToString());
             }
 
-            return drink;
+            return type;
         }
     }
 

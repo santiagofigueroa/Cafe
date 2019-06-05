@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AcuCafe
 {
-    public class Drink
+    public abstract class Drink
     {
         public const double MilkCost = 0.5;
         public const double SugarCost = 0.5;

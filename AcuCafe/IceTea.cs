@@ -8,14 +8,15 @@ namespace AcuCafe
 {
     public class IceTea : Drink
     {
+        private double cost { get; set; } = 1.5;
+
         public new string Description
         {
             get { return "Ice tea"; }
         }
 
-        public new double Cost()
-        {
-            double cost = 1.5;
+        public new double Cost() {
+         
 
             if (HasMilk)
                 cost += MilkCost;
